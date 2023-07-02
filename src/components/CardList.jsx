@@ -1,8 +1,13 @@
+import Card from "./Card";
 
-function CardList() {
+function CardList({ cards }) {
   return (
-    <div>CardList</div>
-  )
+    <section className="card__list" aria-label="Секция с карточками">
+      {cards.map((card) => {
+        return <Card key={card.id} card={card} />;
+      })}
+    </section>
+  );
 }
 
-export default CardList
+export default CardList;

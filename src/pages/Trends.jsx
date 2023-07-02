@@ -1,8 +1,9 @@
-
+import CardList from "../components/CardList";
+import initialCards from "../utils/InitialCards";
 
 function Trends() {
   return (
-    <div>Trends</div>
+    <CardList cards={initialCards} />
   )
 }
 
