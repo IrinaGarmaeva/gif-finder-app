@@ -41,6 +41,12 @@ body {
   padding-right: 15px;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+
+}
+
 
 /* ==================HEADER =============================*/
 .header {
@@ -243,11 +249,12 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 18px;
-  padding: 6px 12px 6px 12px;
+  padding: 6px 20px 6px 20px;
   background: #A8FF35;
   background-size: 200% auto;
   cursor: pointer;
   box-shadow: 0 0 10px #eee;
+  transition: all 0.4s ease;
 }
 
 @media(max-width:450px) {
@@ -258,5 +265,112 @@ body {
 }
 
 .notfound__button:hover {
-  background-position: right center;
+  transform: scale(1.2);
+}
+
+/* ===================Card===================== */
+.card {
+  border-radius: 5px;
+}
+
+/* .card:nth-of-type(1) {
+  grid-column: 1 / 3;
+} */
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  max-width: 270px;
+  max-height: 270px;
+  object-fit: cover;
+}
+
+@media(max-width: 900px){
+  .card__image {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+@media(max-width: 750px){
+  .card__image {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+/* ===================CardList ===================*/
+.card__list {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 270px);
+  grid-template-rows: repeat(auto-fit, 270px);
+  gap: 20px;
+}
+
+@media(max-width: 900px){
+  .card__list {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(auto-fit, 200px);
+  }
+}
+
+@media(max-width: 750px){
+  .card__list {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(auto-fit, 200px);
+  }
+}
+
+@media(max-width: 540px){
+  .card__list {
+    grid-template-columns: repeat(1, 200px);
+    grid-template-rows: repeat(auto-fit, 200px);
+  }
+}
+
+/*================ RANDOM GIF  ===============*/
+.random {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.random__image {
+  width: 70%;
+  object-fit: cover;
+}
+
+.random__button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 30px 6px 30px;
+  background-color: #A8FF35;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px #eee;
+}
+
+.random__button:hover {
+  /* background-color: #fff;
+  color:#000; */
+  transform: scale(1.2);
+}
+
+@media(max-width:450px) {
+  .random__button {
+    font-size: 15px;
+    padding: 5px 20px 5px 20px;
+  }
 }

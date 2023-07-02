@@ -11,12 +11,14 @@ function App() {
       <div className="root">
         <div className="page">
           <Header />
-          <Routes>
-            <Route path="/" element={<Search />} />
-            <Route path="/trends" element={<Trends />} />
-            <Route path="/random-gif" element={<RandomGif />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
+          <main className="container">
+            <Routes>
+              <Route path="/" element={<Search />} />
+              <Route path="/trends" element={<Trends />} />
+              <Route path="/random-gif" element={<RandomGif />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
+          </main>
         </div>
       </div>
     </BrowserRouter>
