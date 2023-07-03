@@ -1,20 +1,32 @@
-
 import Button from "../components/Button";
+import { api } from "../utils/Api";
+import React from "react";
+import { useEffect } from "react";
 
 // получает карточку, изменить  alt на имя или альт картинки с апи
 function RandomGif({}) {
+  const [gif, setGif] = React.useState(null);
+
+  const fetchGif = () => {
+    api
+      .getRandomGifs()
+      .then((data) => {
+        setGif(data.data);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    fetchGif();
+  }, []);
+
   const handleClick = () => {
-    console.log("НАЖАЛИ НА КНОПКУ ЕЩЕ");
-    // добавить выдачу новой рандомной гифки
+    fetchGif();
   };
 
   return (
     <div className="random">
-      <img
-        src="https://media1.giphy.com/media/g96QRNjWUvdKw/giphy.gif?cid=ecf05e4787b1cbzroe1chl04qyqczii81ngsw33atm43m55s&ep=v1_gifs_gifId&rid=giphy.gif&ct=g"
-        alt="картинка"
-        className="random__image"
-      />
+      {gif && <img src={gif.images.fixed_width.url} alt={gif.title} className="random__image" />}
       <Button
         className="random__button"
         type="button"

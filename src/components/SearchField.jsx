@@ -1,40 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { api } from "../utils/Api";
+import CardList from "./CardList";
 
-
-function SearchField() {
-  const [text, setText] = useState('');
+function SearchField({setGifs }) {
+  const [text, setText] = useState("");
 
   const handleChange = (e) => {
     setText(e.target.value);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form is submitted')
-    // ДОПИСАТЬ ФУНКЦИЮ, ОТПРАВКА ЗАПРОСА НА СЕРВЕР, ВЫГРУЗКА ГИФ
-  }
+    // изменить offset для того чтобы сделать до п страницы
+    api
+      .searchGifs(text, 12, 0)
+      .then((data) => {
+        setGifs(
+          data.data.map((gif) => {
+            return gif;
+          })
+        );
+      })
+      .catch((error) => console.error(error));
+  };
 
   const handleClearInput = () => {
-    setText('');
-  }
+    setText("");
+  };
 
   return (
     <div className="search">
       <form className="search__form" autoComplete="off" onSubmit={handleSubmit}>
         <input
-        type="text"
-        className="search__input"
-        placeholder="Найти GIF"
-        value={text}
-        onChange={handleChange}
-        minLength='2'
-        maxLength='40'
+          type="text"
+          className="search__input"
+          placeholder="Найти GIF"
+          value={text}
+          onChange={handleChange}
+          minLength="2"
+          maxLength="40"
         />
-        <button type="submit" className="button search__button"/>
-        {text && <button type="button" className="button delete__button" onClick={handleClearInput}/>}
+        <button type="submit" className="button search__button" />
+        {text && (
+          <button
+            type="button"
+            className="button delete__button"
+            onClick={handleClearInput}
+          />
+        )}
       </form>
     </div>
-  )
+  );
 }
 
-export default SearchField
+export default SearchField;
