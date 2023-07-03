@@ -1,4 +1,5 @@
 import SearchField from "../components/SearchField";
+import Pagination from "../components/Pagination";
 import CardList from "../components/CardList";
 import initialCards from "../utils/InitialCards";
 
@@ -8,7 +9,7 @@ function Search() {
     <>
       <SearchField />
       <CardList cards={initialCards} />
-      <div>Search</div>
+      <Pagination postsPerPage={} totalPosts={} paginate={}/>
     </>
   )
 }
