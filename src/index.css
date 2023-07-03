@@ -374,3 +374,31 @@ body {
     padding: 5px 20px 5px 20px;
   }
 }
+
+
+/* ============PAGINATION ============ */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.pagination__item {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.pagination__item_active{
+  background-color: #A8FF35;
+}

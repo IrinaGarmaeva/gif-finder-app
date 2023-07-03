@@ -1,0 +1,28 @@
+.random__button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 30px 6px 30px;
+  background-color: #A8FF35;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px #eee;
+}
+
+.random__button:hover {
+  /* background-color: #fff;
+  color:#000; */
+  transform: scale(1.2);
+}
+
+@media(max-width:450px) {
+  .random__button {
+    font-size: 15px;
+    padding: 5px 20px 5px 20px;
+  }
+}

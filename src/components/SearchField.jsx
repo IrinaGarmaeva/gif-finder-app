@@ -2,46 +2,22 @@ import { useState, useEffect } from "react";
 import { api } from "../utils/Api";
 import CardList from "./CardList";
 
-function SearchField({setGifs }) {
-  const [text, setText] = useState("");
-
-  const handleChange = (e) => {
-    setText(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // изменить offset для того чтобы сделать до п страницы
-    api
-      .searchGifs(text, 12, 0)
-      .then((data) => {
-        setGifs(
-          data.data.map((gif) => {
-            return gif;
-          })
-        );
-      })
-      .catch((error) => console.error(error));
-  };
-
-  const handleClearInput = () => {
-    setText("");
-  };
+function SearchField({searchRequest, handleChange, onSubmit, handleClearInput }) {
 
   return (
     <div className="search">
-      <form className="search__form" autoComplete="off" onSubmit={handleSubmit}>
+      <form className="search__form" autoComplete="off" onSubmit={onSubmit}>
         <input
           type="text"
           className="search__input"
           placeholder="Найти GIF"
-          value={text}
+          value={searchRequest}
           onChange={handleChange}
           minLength="2"
           maxLength="40"
         />
         <button type="submit" className="button search__button" />
-        {text && (
+        {searchRequest && (
           <button
             type="button"
             className="button delete__button"
