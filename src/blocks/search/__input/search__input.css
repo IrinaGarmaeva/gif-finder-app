@@ -4,6 +4,7 @@
   border: none;
   border-radius: 5px;
   font-size: 20px;
+  background-color: #f2f3f4;
 }
 
 @media(max-width:450px) {

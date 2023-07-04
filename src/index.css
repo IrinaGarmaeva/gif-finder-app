@@ -9,6 +9,12 @@
 @import url('./blocks/header-nav/__item/header-nav__item.css');
 @import url('./blocks/header-nav/__item/_active/header-nav__item_active.css');
 @import url('./blocks/container/container.css');
+<<<<<<< HEAD
+=======
+@import url('./blocks/loading/loading.css');
+@import url('./blocks/loading/__image/loading__image.css');
+
+>>>>>>> 93c45213076cff43be4e9bcb029f453406272fc0
 @import url('./blocks/search/search.css');
 @import url('./blocks/search/__form/search__form.css');
 @import url('./blocks/search/__input/search__input.css');
@@ -21,9 +27,20 @@
 @import url('./blocks/pagination/__item/pagination__item.css');
 @import url('./blocks/random/random.css');
 @import url('./blocks/random/__image/random__image.css');
+<<<<<<< HEAD
 @import url('./blocks/notfound/__block/notfound__block.css');
 @import url('./blocks/notfound/__button/notfound__button.css');
 @import url('./blocks/notfound/__image/notfound__image.css');
 @import url('./blocks/notfound/__subtitle/notfound__subtitle.css');
 @import url('./blocks/notfound/__title/notfound__title.css');
 @import url('./blocks/notfound/notfound.css');
+=======
+
+@import url('./blocks/notfound/notfound.css');
+@import url('./blocks/notfound/__block/notfound__block.css');
+@import url('./blocks/notfound/__title/notfound__title.css');
+@import url('./blocks/notfound/__subtitle/notfound__subtitle.css');
+@import url('./blocks/notfound/__image/notfound__image.css');
+
+
+>>>>>>> 93c45213076cff43be4e9bcb029f453406272fc0

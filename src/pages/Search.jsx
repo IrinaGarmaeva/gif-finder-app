@@ -1,7 +1,7 @@
 import SearchField from "../components/SearchField";
 import CardList from "../components/CardList";
 import Pagination from "../components/Pagination";
-import React from "react";
+
 
 function Search({
   gifs,
@@ -9,11 +9,17 @@ function Search({
   searchRequest,
   currentPage,
   itemsPerPage,
+  isLoading,
   setCurrentPage,
   handleChange,
   handleClearInput,
-  handleSubmit,
+  searchGifs,
 }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchGifs();
+  }
+
   return (
     <>
       <SearchField
@@ -22,7 +28,11 @@ function Search({
         onSubmit={handleSubmit}
         handleClearInput={handleClearInput}
       />
+<<<<<<< HEAD
       <CardList cards={currentItems}/>
+=======
+      <CardList cards={currentItems} isLoading={isLoading} />
+>>>>>>> 93c45213076cff43be4e9bcb029f453406272fc0
       <Pagination
         currentPage={currentPage}
         itemsPerPage={itemsPerPage}

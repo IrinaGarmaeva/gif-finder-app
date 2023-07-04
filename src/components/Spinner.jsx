@@ -4,8 +4,8 @@ function Spinner() {
   return (
     <div className="loading">
       <img
-        width={180}
-        className="loading__img"
+        width={160}
+        className="loading__image"
         src={spinner}
         alt="Loading..."
       />
