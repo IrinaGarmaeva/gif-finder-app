@@ -1,11 +1,9 @@
 import Button from "../components/Button";
 import { api } from "../utils/Api";
-import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-// получает карточку, изменить  alt на имя или альт картинки с апи
 function RandomGif({}) {
-  const [gif, setGif] = React.useState(null);
+  const [gif, setGif] = useState(null);
 
   const fetchGif = () => {
     api
@@ -28,10 +26,10 @@ function RandomGif({}) {
     <div className="random">
       {gif && <img src={gif.images.fixed_width.url} alt={gif.title} className="random__image" />}
       <Button
-        className="random__button"
+        className="button_size_medium"
         type="button"
         onClick={handleClick}
-        text={"Еще GIF"}
+        text={"More GIF"}
       />
     </div>
   );

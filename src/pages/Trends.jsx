@@ -1,34 +1,31 @@
 import CardList from "../components/CardList";
 import Pagination from "../components/Pagination";
 import React from "react";
-import { useState,useEffect } from "react";
-import { api } from "../utils/Api";
+import { useEffect } from "react";
 
-function Trends() {
-  const [gifs, setGifs] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(12);
-
-
+function Trends({
+  currentItems,
+  currentPage,
+  itemsPerPage,
+  gifs,
+  setCurrentPage,
+  showTrendingGifs,
+}) {
   useEffect(() => {
-    api.getTrendingGifs(100,0)
-    .then((data) => {
-      setGifs(
-        data.data.map((gif) => {
-          return gif;
-        })
-      );
-    })
-    .catch((error) => console.error(error));
-  },[]);
-
+    showTrendingGifs();
+  }, []);
 
   return (
     <>
-    <CardList cards={gifs} />
-    <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={gifs.length} setCurrentPage={setCurrentPage} />
+      <CardList cards={currentItems} />
+      <Pagination
+        currentPage={currentPage}
+        itemsPerPage={itemsPerPage}
+        totalItems={gifs.length}
+        setCurrentPage={setCurrentPage}
+      />
     </>
-  )
+  );
 }
 
 export default Trends;

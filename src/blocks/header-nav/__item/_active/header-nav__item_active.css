@@ -1,0 +1,11 @@
+.header-nav__item_active {
+  color: #A8FF35;
+  border-bottom: 2px #A8FF35 solid;
+  text-decoration: none;
+}
+
+@media(max-width:450px) {
+  .header-nav__item_active {
+    font-size: 14px;
+  }
+}

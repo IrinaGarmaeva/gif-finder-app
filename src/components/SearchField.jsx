@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { api } from "../utils/Api";
 import CardList from "./CardList";
+import Button from "./Button";
 
-function SearchField({searchRequest, handleChange, onSubmit, handleClearInput }) {
-
+function SearchField({
+  searchRequest,
+  handleChange,
+  onSubmit,
+  handleClearInput,
+}) {
   return (
     <div className="search">
       <form className="search__form" autoComplete="off" onSubmit={onSubmit}>
@@ -16,11 +21,14 @@ function SearchField({searchRequest, handleChange, onSubmit, handleClearInput })
           minLength="2"
           maxLength="40"
         />
-        <button type="submit" className="button search__button" />
+        <Button
+          type={"submit"}
+          className={"button_size_small search__button_type_search"}
+        />
         {searchRequest && (
-          <button
-            type="button"
-            className="button delete__button"
+          <Button
+            type={"button"}
+            className={"button_size_small search__button_type_delete"}
             onClick={handleClearInput}
           />
         )}

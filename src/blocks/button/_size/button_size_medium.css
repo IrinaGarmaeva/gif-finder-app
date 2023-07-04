@@ -1,0 +1,25 @@
+.button_size_medium {
+  align-self: center;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 20px 6px 20px;
+  background: #A8FF35;
+  background-size: 200% auto;
+  cursor: pointer;
+  box-shadow: 0 0 10px #eee;
+  transition: all 0.4s ease;
+}
+
+@media(max-width:450px) {
+  .button_size_medium {
+    font-size: 15px;
+    padding: 5px 9px 5px 9px;
+  }
+}

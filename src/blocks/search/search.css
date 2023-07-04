@@ -1,0 +1,14 @@
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  /* flex-direction: row; */
+}
+
+@media(max-width: 450px) {
+  .search{
+    padding-top: 40px;
+  }
+}
+

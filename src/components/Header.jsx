@@ -1,4 +1,5 @@
-import logo from "../assets/logo.gif";
+// import logo from "../assets/logo.gif";
+import logo from "../assets/logoSlogan-removebg-preview.png"
 import { useNavigate, useLocation } from "react-router-dom";
 
 function Header() {
@@ -14,34 +15,32 @@ function Header() {
   return (
     <div className="header">
       <img src={logo} className="header__logo" />
-      <nav className="navbar">
-        <ul className="nav">
+        <ul className="header-nav">
           <li
-            className={`nav__item ${
-              pathMatchRoute("/") ? "nav__item_active" : ""
+            className={`header-nav__item ${
+              pathMatchRoute("/") ? "header-nav__item_active" : ""
             }`}
             onClick={() => navigate("/")}
           >
-            Поиск
+            Search
           </li>
           <li
-            className={`nav__item ${
-              pathMatchRoute("/trends") ? "nav__item_active" : ""
+            className={`header-nav__item ${
+              pathMatchRoute("/trends") ? "header-nav__item_active" : ""
             }`}
             onClick={() => navigate("/trends")}
           >
-            Тренды
+            Trending
           </li>
           <li
-            className={`nav__item ${
-              pathMatchRoute("/random-gif") ? "nav__item_active" : ""
+            className={`header-nav__item ${
+              pathMatchRoute("/random-gif") ? "header-nav__item_active" : ""
             }`}
             onClick={() => navigate("/random-gif")}
           >
-            Случайная гиф
+            Random Gif
           </li>
         </ul>
-      </nav>
     </div>
   );
 }

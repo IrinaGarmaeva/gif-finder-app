@@ -1,0 +1,19 @@
+.page{
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background: #1D1D1B;
+  color: #fff;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 100vh;
+  /* padding: 0 20px 0 20px 0; */
+  padding-left: 15px;
+  padding-right: 15px;
+}
