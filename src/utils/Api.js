@@ -39,5 +39,5 @@ class Api {
 
 export const api = new Api({
     url: 'https://api.giphy.com/v1/gifs',
-    apiKey: 'D62Zd7oP6sGSpahKphi5CUJwTgIy6kgn'
+    apiKey: 'DdqVAdDoPxWGE4ljULY4GNeth7Df7H7D'
 });

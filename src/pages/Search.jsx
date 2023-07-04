@@ -8,7 +8,7 @@ import { api } from "../utils/Api";
 
 function Search() {
   const [gifs,setGifs] = React.useState([]);
-
+  const [selectedCard, setSelectedCard] = React.useState({});
   //это заглушка для картинок перед поиском, чтобы не повторяться с трендаит я начала с 12 гифки
   useEffect(() => {
     api.getTrendingGifs(12,12)
@@ -21,6 +21,10 @@ function Search() {
     })
     .catch((error) => console.error(error));
   },[]);
+
+  function closeAllPopups() {
+    setSelectedCard({});
+  }
 
   return (
     <>
