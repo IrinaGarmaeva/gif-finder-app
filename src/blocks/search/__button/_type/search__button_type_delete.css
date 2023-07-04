@@ -1,13 +1,13 @@
 .search__button_type_delete {
-  background: url('../../../../assets/deleteIcon.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 25px 25px;
-  right: 5%;
-  margin-right: 10px;
-  transition: all 0.4s ease;
+    background: url('../../../../assets/deleteIcon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    right: 40px;
+    transition: all 0.3s ease;
 }
 
 .search__button_type_delete:hover {
-  background-color: #ff4040;
+    background-color: #ff4040;
+    border-radius: 5px;
 }

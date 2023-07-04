@@ -22,7 +22,7 @@ function Search({
         onSubmit={handleSubmit}
         handleClearInput={handleClearInput}
       />
-      <CardList cards={currentItems} />
+      <CardList cards={currentItems}/>
       <Pagination
         currentPage={currentPage}
         itemsPerPage={itemsPerPage}
