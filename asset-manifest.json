@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/gif-finder-app/static/css/main.cd0f6c74.css",
+    "main.js": "/gif-finder-app/static/js/main.e3f6c392.js",
+    "static/js/787.d6f6e849.chunk.js": "/gif-finder-app/static/js/787.d6f6e849.chunk.js",
+    "static/media/notFound.gif": "/gif-finder-app/static/media/notFound.b0232c0ecedc97323513.gif",
+    "static/media/loading.gif": "/gif-finder-app/static/media/loading.90672f1deffccbcdf4f1.gif",
+    "static/media/logoSlogan-removebg-preview.png": "/gif-finder-app/static/media/logoSlogan-removebg-preview.50df396be193fab95e71.png",
+    "static/media/searchIcon2.svg": "/gif-finder-app/static/media/searchIcon2.8f83eec3c43288f6c8c0.svg",
+    "index.html": "/gif-finder-app/index.html",
+    "static/media/deleteIcon.svg": "/gif-finder-app/static/media/deleteIcon.a01ff1b60d6c9efb16f7.svg",
+    "main.cd0f6c74.css.map": "/gif-finder-app/static/css/main.cd0f6c74.css.map",
+    "main.e3f6c392.js.map": "/gif-finder-app/static/js/main.e3f6c392.js.map",
+    "787.d6f6e849.chunk.js.map": "/gif-finder-app/static/js/787.d6f6e849.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd0f6c74.css",
+    "static/js/main.e3f6c392.js"
+  ]
+}
