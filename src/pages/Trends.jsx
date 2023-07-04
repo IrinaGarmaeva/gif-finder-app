@@ -12,7 +12,7 @@ function Trends({
   showTrendingGifs,
 }) {
   useEffect(() => {
-    showTrendingGifs();
+    return showTrendingGifs;
   }, []);
 
   return (

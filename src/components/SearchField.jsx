@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { api } from "../utils/Api";
-import CardList from "./CardList";
 import Button from "./Button";
 
 function SearchField({

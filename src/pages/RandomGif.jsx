@@ -1,30 +1,21 @@
 import Button from "../components/Button";
-import { api } from "../utils/Api";
-import { useState, useEffect } from "react";
+import Spinner from "../components/Spinner";
+import { useEffect } from "react";
 
-function RandomGif({}) {
-  const [gif, setGif] = useState(null);
-
-  const fetchGif = () => {
-    api
-      .getRandomGifs()
-      .then((data) => {
-        setGif(data.data);
-      })
-      .catch((error) => console.error(error));
-  };
+function RandomGif({isLoading, gifSingle, getRandomGif}) {
 
   useEffect(() => {
-    fetchGif();
+    return getRandomGif;
   }, []);
 
   const handleClick = () => {
-    fetchGif();
+    getRandomGif();
   };
+
 
   return (
     <div className="random">
-      {gif && <img src={gif.images.fixed_width.url} alt={gif.title} className="random__image" />}
+      {isLoading ? <Spinner /> : <img src={gifSingle.images.fixed_width.url} alt={gifSingle.title} className="random__image" />}
       <Button
         className="button_size_medium"
         type="button"
