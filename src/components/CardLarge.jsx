@@ -1,6 +1,3 @@
-
-
-// изменить  alt на имя или альт картинки с апи
 function CardLarge() {
   return (
     <section className="card-large" aria-label="Случайная Гиф">

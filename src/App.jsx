@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { api } from "./utils/Api";
 import Header from "./components/Header";
 import Search from "./pages/Search";

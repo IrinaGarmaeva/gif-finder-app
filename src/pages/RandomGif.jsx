@@ -15,7 +15,7 @@ function RandomGif({}) {
   };
 
   useEffect(() => {
-    fetchGif();
+    return fetchGif;
   }, []);
 
   const handleClick = () => {
